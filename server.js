@@ -8,6 +8,10 @@ import incomeRoutes from './routes/incomeRoutes.js';
 import insightsRoutes from './routes/insightsRoutes.js';
 import categoryRoutes from './routes/categoryRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import transferRoutes from './routes/transferRoutes.js';
+import investmentRoutes from './routes/investmentRoutes.js';
+import allocationRoutes from './routes/allocationRoutes.js';
+
 
 connectDB();
 
@@ -21,6 +25,10 @@ app.use('/api/income', incomeRoutes);
 app.use('/api/insights', insightsRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/transfers', transferRoutes);
+app.use('/api/investments', investmentRoutes);
+app.use('/api/allocations', allocationRoutes);
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
